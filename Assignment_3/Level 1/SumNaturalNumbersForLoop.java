@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class SumNaturalNumbersForLoop {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a natural number: ");
+        int n = scanner.nextInt();
+
+        if (n <= 0) {
+            System.out.println("Not a natural number.");
+        } else {
+            int sum = 0;
+
+            for (int i = 1; i <= n; i++) {
+                sum += i;
+            }
+
+            int formulaSum = n * (n + 1) / 2;
+
+            System.out.println("Sum using for loop: " + sum);
+            System.out.println("Sum using formula: " + formulaSum);
+
+            if (sum == formulaSum) {
+                System.out.println("Both results are correct.");
+            } else {
+                System.out.println("There is a mismatch.");
+            }
+        }
+
+        scanner.close();
+    }
+}
